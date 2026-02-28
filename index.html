@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#73c91d",
+                        "background-light": "#f7f8f6",
+                        "background-dark": "#192111",
+                        "olive-dark": "#3d4a2e",
+                        "sand": "#e8e4d9",
+                        "charcoal": "#1a1a1a"
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-slate-100 transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="border-b border-olive-dark/10 dark:border-white/10 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<nav class="flex-1 hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+<a class="hover:text-primary transition-colors" href="#">Archive</a>
+<a class="hover:text-primary transition-colors" href="#">Philosophy</a>
+</nav>
+<div class="flex flex-col items-center">
+<span class="text-2xl font-bold tracking-tighter text-charcoal dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">filter_vintage</span>
+                    GEMILANG KATUN
+                </span>
+<span class="text-[10px] uppercase tracking-[0.4em] text-olive-dark/60 dark:text-white/60">Outbound • Batu</span>
+</div>
+<nav class="flex-1 hidden md:flex items-center justify-end gap-8 text-sm uppercase tracking-widest font-medium">
+<a class="hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="hover:text-primary transition-colors" href="#">Journal</a>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Asymmetric Split Layout -->
+<div class="flex flex-col lg:flex-row gap-12 lg:h-[700px]">
+<!-- Left 60%: Large High-Impact Article -->
+<article class="lg:w-[60%] relative group overflow-hidden rounded-xl bg-charcoal">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Serene mountain landscape in Batu Malang during sunrise" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD84f58zYO9y6JxXDkGeFVsIu3bluhHj2UFvq43UGZylByr2yX0ozEXIo61JKKGr0uSS2h6QjEyfGSRQRKQHzZNrTpGmIK2Bpi5IXvkNrSOJa8791a8ypgZv91ctDCnTcO14v8VeMqc2hJD5hQ2aoDfoa2xvdA-7ddDlbMVHOpDgEXMnQJ_PaMSECZrYMUsQvpO8nK4x6Ree4jg7bby90NmTGdtCyXHTlnbb6w5KeYtYEbVZUnFgeks9SloAQWakKvWpAJV9Zp8kE');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12 w-full">
+<span class="inline-block px-3 py-1 bg-primary text-background-dark text-xs font-bold uppercase tracking-widest mb-6 rounded">Feature</span>
+<h1 class="text-4xl md:text-6xl text-white font-display font-medium leading-[1.1] mb-6 max-w-2xl">
+                        Unveiling the Serenity of Batu: A New Era of Corporate Retreats
+                    </h1>
+<p class="text-white/80 text-lg md:text-xl font-light mb-8 max-w-xl italic">
+                        "In the heart of East Java, where the mist meets the pine forests, a new definition of professional restoration is being written."
+                    </p>
+<div class="flex items-center gap-4 text-white/60 text-sm uppercase tracking-widest">
+<span>By Aris Rahman</span>
+<span class="w-8 h-[1px] bg-white/30"></span>
+<span>12 Min Read</span>
+</div>
+</div>
+<a class="absolute inset-0 z-10" href="#"></a>
+</article>
+<!-- Right 40%: Vertical Stack of 3 Text Articles -->
+<aside class="lg:w-[40%] flex flex-col justify-between py-2 border-y lg:border-y-0 lg:border-l border-olive-dark/10 dark:border-white/10 lg:pl-12">
+<div class="space-y-12 divide-y divide-olive-dark/10 dark:divide-white/10">
+<article class="pt-0 first:pt-0">
+<span class="text-xs font-bold text-primary uppercase tracking-widest mb-3 block">Perspective</span>
+<h3 class="text-2xl font-display font-semibold mb-3 hover:text-primary transition-colors cursor-pointer leading-snug">
+                            The Art of Quiet Leadership in Nature
+                        </h3>
+<p class="text-olive-dark/70 dark:text-slate-400 leading-relaxed line-clamp-2">
+                            How the stillness of the Malang highlands fosters deeper strategic clarity for executive teams.
+                        </p>
+<div class="mt-4 flex items-center gap-2 text-xs uppercase tracking-tighter font-bold">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</article>
+<article class="pt-10">
+<span class="text-xs font-bold text-primary uppercase tracking-widest mb-3 block">Conservation</span>
+<h3 class="text-2xl font-display font-semibold mb-3 hover:text-primary transition-colors cursor-pointer leading-snug">
+                            Sustainable Tourism: Preserving the Batu Ecosystem
+                        </h3>
+<p class="text-olive-dark/70 dark:text-slate-400 leading-relaxed line-clamp-2">
+                            Gemilang Katun's commitment to low-impact exploration and local forest rejuvenation initiatives.
+                        </p>
+<div class="mt-4 flex items-center gap-2 text-xs uppercase tracking-tighter font-bold">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</article>
+<article class="pt-10">
+<span class="text-xs font-bold text-primary uppercase tracking-widest mb-3 block">Curation</span>
+<h3 class="text-2xl font-display font-semibold mb-3 hover:text-primary transition-colors cursor-pointer leading-snug">
+                            Beyond the Boardroom: 5 Hidden Gems in Malang
+                        </h3>
+<p class="text-olive-dark/70 dark:text-slate-400 leading-relaxed line-clamp-2">
+                            A curated guide to the most secluded spots for team reflection and cultural immersion.
+                        </p>
+<div class="mt-4 flex items-center gap-2 text-xs uppercase tracking-tighter font-bold">
+                            Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</article>
+</div>
+</aside>
+</div>
+<!-- Wide Marquee Text Bar -->
+<div class="mt-20 py-8 border-y-2 border-charcoal dark:border-white overflow-hidden whitespace-nowrap">
+<div class="flex items-center gap-12 text-4xl md:text-6xl font-display font-black uppercase tracking-tighter opacity-10 animate-pulse">
+<span>SUSTAINABLE ADVENTURE • MODERN EDITORIAL • BATU MALANG • GEMILANG KATUN • CORPORATE SERENITY • RETREAT SPECIALISTS •</span>
+<span>SUSTAINABLE ADVENTURE • MODERN EDITORIAL • BATU MALANG • GEMILANG KATUN • CORPORATE SERENITY • RETREAT SPECIALISTS •</span>
+</div>
+</div>
+<!-- Secondary Section: Grid of Smaller Dispatches -->
+<section class="mt-20">
+<div class="flex items-center justify-between mb-12">
+<h2 class="text-3xl font-display font-medium">Latest Dispatches</h2>
+<div class="h-[1px] flex-1 mx-8 bg-olive-dark/10 dark:bg-white/10"></div>
+<a class="text-sm uppercase tracking-widest font-bold hover:text-primary" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[4/5] bg-sand dark:bg-olive-dark/20 rounded-lg overflow-hidden">
+<img alt="Dense green forest with sunlight filtering through" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dense green forest path in Batu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOyxCvpgkd0q6jDOFZtuaCixYv5ocieM4MRbPjLQmXYF74dLI7ZqwqjngmKeXlwjJcpx6UvNS3w_erNSyuusd5DOh80XXsi-Qwurgh9GAO4c8iUPfSwTD7abdLnfEjVKDJU8jdvWJOeUTjr-ZeAdbVpTLOh09s-nFOZivQUvlCK3VJ6NKEdqXYLQt1VOsAof606kw9wQBN8DCPHHH-WgHRtR1h_sl2gsIyUJGK2AGsx07pMQkrrP2ykXYqVvwJ-Pc2XSv-YTGeIBk"/>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Journal • Oct 2023</span>
+<h4 class="text-xl font-display font-bold leading-tight group-hover:underline">Forest Bathing: The Science of Nature Immersion</h4>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[4/5] bg-sand dark:bg-olive-dark/20 rounded-lg overflow-hidden">
+<img alt="Traditional Javanese architectural details" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Intricate wooden Javanese architecture details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVTA-MN0lJnsRHoGHb1eEuWxBz-7p5C5tTqGGu90KVkLgmuf01K3r9f4cj0GMIS7gtXJj-_lJe_RGpsi0wzZCaixHeefIukdR-flm4OLscJHW33svQdP8NqGBI5FXcGuDqjeSgnYa9Ds8aW0WAlotWdTTkSHI6iE5cCwiU21RNxcT_oBO9At2q3dKnboAd7pJ9dKp8NxtpEcMV_6d0GKkoj3y2licN5P8r-hFBgtLZWb0Frsa9NrHS2heAdjesc60CjrlYlsdCufs"/>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Culture • Sept 2023</span>
+<h4 class="text-xl font-display font-bold leading-tight group-hover:underline">Heritage &amp; Harmony: Designing Spaces for Connection</h4>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[4/5] bg-sand dark:bg-olive-dark/20 rounded-lg overflow-hidden">
+<img alt="Abstract eco-friendly texture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Eco-friendly green moss pattern texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHLkuoPiVGMdDAaMStx04lSqiuLgOuv8a2e1VcA2kTRY3YYcWBwsuqxGn3aavoPFpoWs5ISK_U0WSwXRl9HJZqjyrBMtq7Og7TohVafZH-NlWsjLbp8N1ZzZc9wljRKj6Fx-UrcXuqCtqLsTxrxc3jgyjBjGGbifPn1qLhVhzSmSDibUVGw5x-HdMkFsvQZ1lMLtuQcDbamGyDcvYbI-vb67whTBoAt6ePcnXowLCNmZzKTB2ZZ-Ck2I1UVCCan94DubxGuDU8XI4"/>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Innovation • Aug 2023</span>
+<h4 class="text-xl font-display font-bold leading-tight group-hover:underline">The Future of Sustainable Outbound Logistics</h4>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-24 bg-charcoal text-white py-20 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-md">
+<h2 class="text-3xl font-display font-bold mb-6">GEMILANG KATUN</h2>
+<p class="text-white/60 font-light leading-relaxed mb-8">
+                    An editorial voice for the conscious professional, exploring the intersection of nature, leadership, and sustainability in the heart of Malang.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="space-y-4">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Explore</h5>
+<ul class="space-y-2 text-sm text-white/60">
+<li><a class="hover:text-white" href="#">Articles</a></li>
+<li><a class="hover:text-white" href="#">Philosophy</a></li>
+<li><a class="hover:text-white" href="#">Locations</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-xs font-bold uppercase tracking-widest text-primary">Contact</h5>
+<ul class="space-y-2 text-sm text-white/60">
+<li><a class="hover:text-white" href="#">Inquiries</a></li>
+<li><a class="hover:text-white" href="#">Press</a></li>
+<li><a class="hover:text-white" href="#">Partnerships</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-widest text-white/40">
+<span>© 2024 Gemilang Katun Outbound. All Rights Reserved.</span>
+<span class="mt-4 md:mt-0">Design Variant 05 • Editorial Magazine</span>
+</div>
+</footer>
+</body></html>
